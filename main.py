@@ -1,9 +1,9 @@
 ### Assignment: Regex and Files
-##Name:
-##Date: 
+##Name: Clarissa
+##Date: Beamish
 
 #don't forget to import regex
-
+import re
 
 ##(/5) Task 1: MODIFY the code below.
 #A# Change the regex from .* to what is required to capture an email address
@@ -11,15 +11,14 @@
 #C# Count the number of email addresses found and print a final output line.
 
 def reEmail(fname):
-  
+  count = 0
   fhand = open(fname,'r')
   for line in fhand:
-    extr = re.findall('.*',line)
-    if len(extr): 
+    extr = re.findall('.*@.*', line)
+    if len(extr):
+      count += 1 
       print(extr)
-        
-
-  print()
+  print("Number of emails:", count)
     
 
 '''### Task 1 Results for 
