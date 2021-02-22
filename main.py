@@ -51,11 +51,14 @@ def reAward(fname):
 
 def rePhone(fname):
   #open file
+  fhand = open(fname, 'r')
   #loop through the file
+  for line in fhand:
   #extract the specific phone numbers regex
+    extr = re.findall('902.*', line)
   #if the length of the extraction is not empty
-  #print the phone number
-  pass
+    if len(extr):
+      print(extr)  #print the phone number
 
 '''### Task 3 results
 >rePhone('rural-staff.txt')
