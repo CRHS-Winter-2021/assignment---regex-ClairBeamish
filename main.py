@@ -36,7 +36,7 @@ There were 89 email addresses in rural-staff.txt
 def reAward(fname):
   fhand = open(fname, 'r')
   for line in fhand:
-    extr = re.findall('.*', line)
+    extr = re.findall('- (.*)', line)
     if len(extr):
       print(extr)
 
